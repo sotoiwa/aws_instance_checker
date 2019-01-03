@@ -9,6 +9,7 @@ Create `lambda.json`.
   "name": "aws_instance_checker",
   "description": "My AWS instance checker.",
   "region": "ap-northeast-1",
+  "runtime": "python3.7",
   "handler": "lambda_function.lambda_handler",
   "role": "arn:hogehoge",
   "timeout": 300,
