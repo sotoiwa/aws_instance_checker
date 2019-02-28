@@ -70,12 +70,12 @@ def build_message(instances):
     now = datetime.datetime.now(pytz.timezone('Asia/Tokyo'))
 
     text = '{}現在稼働しているEC2インスタンス一覧'.format(now.strftime('%Y年%m月%d日%H時%M分'))
-    atachements_text = ''
+    atachement_text = ''
     for instance in instances:
-        atachements_text += 'name: {}, type: {}, id: {}, region: {}\n'.format(
+        atachement_text += 'name: {}, type: {}, id: {}, region: {}\n'.format(
             instance['name'], instance['type'], instance['id'], instance['region'])
 
-    atachements = {'text': atachements_text, 'color': 'red'}
+    atachements = {'text': atachement_text, 'color': 'warning'}
 
     message = {
         'text': text,
